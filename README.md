@@ -59,7 +59,3 @@ Si deseas contribuir a mejorar este script o agregar nuevas funcionalidades, si�
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENCIA para más información.
-
----
-
-Este README proporciona una guía clara sobre cómo utilizar el script y las consideraciones éticas y legales que deben tenerse en cuenta.
