@@ -45,11 +45,11 @@ Este script automatiza el proceso de creación de un payload para Android utiliz
    - El script ya configura y activa el listener automáticamente.
 
 5. **Captura la sesión**:
-   - Cuando el usuario abra el APK en el dispositivo Android, deberías ver una sesión Meterpreter activa en su terminal de Metasploit.
+   - Cuando el usuario abra el APK en el dispositivo Android, debería ver una sesión Meterpreter activa en su terminal de Metasploit.
 
 ## Notas Importantes
 
-- **Ética y Legalidad**: Este script es solo para fines educativos. Asegúrate de tener el consentimiento adecuado antes de realizar pruebas de penetración. La creación y ejecución de payloads sin autorización es ilegal y antiética.
+- **Ética y Legalidad**: Este script es solo para fines educativos. Asegúrese de tener el consentimiento adecuado antes de realizar pruebas de penetración. La creación y ejecución de payloads sin autorización es ilegal y antiética.
 - **Seguridad**: Mantén el entorno seguro y no utilices este script en dispositivos o redes sin permiso.
 
 ## Contribuciones
