@@ -57,18 +57,3 @@ EOF
 # sessions -i 1
 
 # Fin del Script
-```
-
-### Instrucciones para Ejecutar el Script
-
-1. **Copia el script** en un archivo de texto y guárdalo como `create_payload.sh`.
-2. **Asegúrate de que el script tenga permisos de ejecución**:
-   ```bash
-   chmod +x create_payload.sh
-   ```
-3. **Ejecuta el script**:
-   ```bash
-   ./create_payload.sh
-   ```
-
-Recuerda reemplazar `<tu_ip>` y `<puerto>` con los valores adecuados antes de ejecutar el script. Además, asegúrate de tener el consentimiento adecuado para realizar pruebas de penetración.
