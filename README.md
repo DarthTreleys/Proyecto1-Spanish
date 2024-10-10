@@ -38,14 +38,14 @@ Este script automatiza el proceso de creación de un payload para Android utiliz
    ```
 
 3. **Transfiere el APK**:
-   - Usa ADB o cualquier otro método para transferir `payload.apk` al dispositivo Android.
-   - Asegúrate de que el dispositivo tenga habilitadas las instalaciones de fuentes desconocidas.
+   - Use ADB o cualquier otro método para transferir `payload.apk` al dispositivo Android.
+   - Asegúrese de que el dispositivo tenga habilitadas las instalaciones de fuentes desconocidas.
 
 4. **Inicia el listener en Metasploit**:
    - El script ya configura y activa el listener automáticamente.
 
 5. **Captura la sesión**:
-   - Cuando el usuario abra el APK en el dispositivo Android, deberías ver una sesión Meterpreter activa en tu terminal de Metasploit.
+   - Cuando el usuario abra el APK en el dispositivo Android, deberías ver una sesión Meterpreter activa en su terminal de Metasploit.
 
 ## Notas Importantes
 
